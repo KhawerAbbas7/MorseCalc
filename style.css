@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark(#333b3c, #efefec);
+  background-color: light-dark(#efedea, #223a2c);
+}
+.Header{
+  text-align: center;
+}
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    #display {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 95%;
+    }
+
+    #display {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+#expression {
+    font-size: 16px;
+    color: #888;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    color: #358da1;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #f0f0f0;
+}
+
+.equal {
+    background-color: #4CAF50;
+    color: white;
+}
