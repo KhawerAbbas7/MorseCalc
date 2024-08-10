@@ -88,7 +88,7 @@ buttons.forEach(button => {
                 let result = eval(currentExpression);
                 resultDisplay.textContent = to_morse(result);
             } catch (error) {
-                resultDisplay.textContent = error;
+                resultDisplay.textContent = "ERROR";
             }
         } else if (value === 'AC') {
             currentExpression = '';
